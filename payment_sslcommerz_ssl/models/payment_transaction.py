@@ -4,7 +4,7 @@ from odoo import _, api, models
 from odoo.exceptions import ValidationError
 
 from odoo.addons.payment import utils as payment_utils
-from odoo.addons.payment_sslcommerz.commerz.payment import SSLCSession, Validation
+from odoo.addons.payment_sslcommerz_ssl.commerz.payment import SSLCSession, Validation
 
 
 _logger = logging.getLogger(__name__)

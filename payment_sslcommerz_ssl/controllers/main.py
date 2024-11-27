@@ -4,7 +4,7 @@ from odoo import http
 from odoo.http import request
 from odoo.exceptions import ValidationError
 
-from odoo.addons.payment_sslcommerz.commerz.payment import Validation
+from odoo.addons.payment_sslcommerz_ssl.commerz.payment import Validation
 
 
 _logger = logging.getLogger(__name__)

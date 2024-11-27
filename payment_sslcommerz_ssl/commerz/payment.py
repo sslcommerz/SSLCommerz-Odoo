@@ -4,7 +4,7 @@ import requests
 from typing import Dict
 from decimal import Decimal
 
-from odoo.addons.payment_sslcommerz.commerz import _constants as const
+from odoo.addons.payment_sslcommerz_ssl.commerz import _constants as const
 
 
 class SSLCommerz:
