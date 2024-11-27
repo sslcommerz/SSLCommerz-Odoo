@@ -5,12 +5,13 @@
         <field name="code">sslcommerz</field>
         <field name="name">SSLCommerz</field>
         <field name="redirect_form_view_id" ref="redirect_form" />
-        <field name="module_id" ref="base.module_payment_sslcommerz_ssl"/>
+        <field name="module_id" ref="base.module_payment_sslcommerz_ssl" />
         <field name="payment_method_ids"
             eval="[(6, 0, [
             ref('payment_method_sslcommerz'),
         ])]" />
-        <field name="image_128" type="base64" file="payment_sslcommerz_ssl/static/description/icon.png"/>
+        <field name="image_128" type="base64"
+            file="payment_sslcommerz_ssl/static/description/images/sslcommerz_logo.png" />
     </record>
 
 </odoo>

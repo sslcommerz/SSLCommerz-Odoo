@@ -4,7 +4,7 @@
     'category': 'Accounting/Payment Providers',
     'sequence': 350,
     'summary': "A Payment provider covering Bangladesh.",
-    'description': "SSLCOMMERZ is the largest payment gateway aggregator in Bangladesh and a pioneer in the FinTech industry since 2010.e",
+    'description': "SSLCOMMERZ is the largest payment gateway aggregator in Bangladesh and a pioneer in the FinTech industry since 2010.",
     'author': 'SSLCommerz',
     'maintainer': 'SSLCommerz',
     'support': 'integration@sslcommerz.com',

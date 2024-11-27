@@ -1,6 +1,6 @@
-# SSLCommerz Payment Gateway
+# Odoo module for SSLCOMMERZ
 
-## Technical details
+## Description
 
 This module integrates SSLCommerz Payment Gateway using the generic payment with redirection flow based
 on form submission provided by the `payment` module.
@@ -13,7 +13,7 @@ on form submission provided by the `payment` module.
 ## Prerequisite
 
 - Odoo 16 or higher
-- A <a href="https://developer.sslcommerz.com/registration/" target="_blank">Sandbox Account</a>  or <a href="https://developer.sslcommerz.com/registration/" target="_blank">Live Merchant Account</a>
+- A <a href="https://developer.sslcommerz.com/registration/" target="_blank">Sandbox Account</a>  or <a href="https://join.sslcommerz.com/" target="_blank">Live Merchant Account</a>
 
 ## Installation instructions
 
@@ -22,20 +22,14 @@ Please Follow these steps for setting up SSLCommerz Payment module in Odoo.
 - Unzip and move the payment_sslcommerz_ssl folder in your Odoo module directory
 - Go Odoo settings and activate the developer mode and click on Update app list
 - Search for Payment Provider: SSLCommerz
-- Install the module
-
-----------
-![](/payment_sslcommerz_ssl/static/description/images/module_sslcommerz.png)
+- Activate the module
 
 ## Setup
 
 Once you have installed the module please follow these steps for setting up SSLCommerz Payment Provider.
-- Go to your websites configuration > Payment Providers & select SSLCommerz
+- Go to your websites Configuration > Payment Providers & select SSLCommerz
 - Enter your credentials. For testing enter your sandbox store id and password and set the state as Test Mode. For production enter your merchant store id and password and set the state as Enabled.
 - Now you will be able to select SSLCommerz payment method in the checkout page.
-
-----------
-![](/payment_sslcommerz_ssl/static/description/images/2_select_payment_method.png)
 
 
 ### Test Credit Card Account Numbers
