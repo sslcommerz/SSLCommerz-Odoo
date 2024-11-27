@@ -24,12 +24,18 @@ Please Follow these steps for setting up SSLCommerz Payment module in Odoo.
 - Search for Payment Provider: SSLCommerz
 - Activate the module
 
+----------
+![](/payment_sslcommerz_ssl/static/description/images/module_sslcommerz.png)
+
 ## Setup
 
 Once you have installed the module please follow these steps for setting up SSLCommerz Payment Provider.
 - Go to your websites Configuration > Payment Providers & select SSLCommerz
 - Enter your credentials. For testing enter your sandbox store id and password and set the state as Test Mode. For production enter your merchant store id and password and set the state as Enabled.
 - Now you will be able to select SSLCommerz payment method in the checkout page.
+
+----------
+![](/payment_sslcommerz_ssl/static/description/images/2_select_payment_method.png)
 
 
 ### Test Credit Card Account Numbers
