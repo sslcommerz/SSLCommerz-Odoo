@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SSLCommerz Payment Gateway</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        color: #333;
+      }
+
+      .header {
+        background: linear-gradient(90deg, #003f6b, #005a8f);
+        color: white;
+        text-align: center;
+        padding: 50px 20px;
+      }
+
+      .header h1 {
+        font-size: 2.5em;
+        margin: 0;
+      }
+
+      .header p {
+        font-size: 1.2em;
+        margin: 10px 0 0;
+        line-height: 1.5;
+      }
+
+      .content {
+        background-color: white;
+        color: black;
+        text-align: center;
+        padding: 50px 20px;
+      }
+
+      .content h2 {
+        font-size: 2em;
+        margin: 0 0 10px;
+      }
+
+      .content p {
+        font-size: 1em;
+        margin: 10px 0 0;
+        line-height: 1.5;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 40px auto;
+        display: flex;
+        gap: 40px;
+        flex-wrap: wrap;
+        padding: 0 20px;
+      }
+
+      .left,
+      .right {
+        flex: 1;
+        min-width: 300px;
+      }
+
+      .section-title {
+        font-size: 0.8em;
+        font-weight: bold;
+        color: #999;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+      }
+
+      .headline {
+        font-size: 2em;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #000;
+      }
+
+      .description {
+        font-size: 1em;
+        line-height: 1.6;
+        color: #555;
+      }
+
+      .feature {
+        margin-bottom: 20px;
+      }
+
+      .feature-title {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      .divider {
+        border-top: 1px solid #ddd;
+        margin: 15px 0;
+      }
+
+      .tutorial {
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 20px;
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .tutorial h3 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+      }
+
+      .tutorial p {
+        font-size: 1em;
+        line-height: 1.8;
+        margin: 15px 0;
+      }
+
+      .tutorial img {
+        max-width: 100%;
+        margin: 20px 0;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+
+      .tutorial a {
+        color: #005a8f;
+        text-decoration: none;
+      }
+
+      .tutorial a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <div class="header">
+      <div>
+        <a href="https://sslcommerz.com/">
+          <img
+            src="images/sslcommerz_logo.png"
+            alt="SSLCommerz"
+            style="max-width: 150px; max-height: 50px"
+          />
+        </a>
+      </div>
+      <h1>One Gateway for all your payment needs</h1>
+      <p>
+        SSLCOMMERZ is an end-to-end payment solution for your business with
+        extensive coverage, seamless integration, and support for multiple
+        channels.
+      </p>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content">
+      <h2>Easy integration with documnetation to help guide you</h2>
+      <p>
+        Integrating SSLCOMMERZ is as simple as clicking on checkout, with
+        well-documented SDKs, APIs, plugins, and a video tutorial available for
+        all the major platforms and languages.
+      </p>
+    </div>
+
+    <!-- Features Section -->
+    <div class="container">
+      <div class="left">
+        <div class="section-title">Easy Checkout</div>
+        <div class="headline">
+          Simple way to integrate payments on web and mobile.
+        </div>
+        <div class="description">
+          Use Easy Checkout and leave the complexities of payment validations,
+          error handling, and retry processes to us.
+        </div>
+      </div>
+      <div class="right">
+        <div class="feature">
+          <div class="feature-title">Simple to integrate</div>
+          <div class="description">
+            SSLCOMMERZ is a cross-platform payment gateway that can be embedded
+            using a few lines of JavaScript. No more week-long integration woes.
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="feature">
+          <div class="feature-title">Responsive, works everywhere</div>
+          <div class="description">
+            Checkout works smoothly across all major platforms and browsers.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tutorial Section -->
+    <div class="tutorial">
+      <h3>Payment Provider Configuration</h3>
+      <p>Enter SSLCommerz Store ID and Password.</p>
+      <p>
+        For registration in Sandbox/Testing, click the link
+        <a href="https://developer.sslcommerz.com/registration/" target="_blank"
+          >https://developer.sslcommerz.com/registration/</a
+        ><br />
+        For registration in Production, click the link
+        <a href="https://signup.sslcommerz.com/register" target="_blank"
+          >https://signup.sslcommerz.com/register</a
+        >
+      </p>
+      <p>
+        In Test Mode enter Sandbox credentials and set State to Test Mode.<br />In
+        Live enter Production credentials and set State to Enabled.
+      </p>
+      <img
+        src="images/1_payment_provider_configuration.png"
+        alt="Configuration Screenshot"
+      />
+
+      <h3>
+        Now customers will be able to select SSLCommerz as payment gateway
+      </h3>
+      <img
+        src="images/2_select_payment_method.png"
+        alt="Payment Method Screenshot"
+      />
+
+      <h3>Gateway Page</h3>
+      <p>
+        <strong>Live Environment:</strong> All transactions made using this
+        environment are counted as real transactions. URL starts with
+        <code>https://securepay.sslcommerz.com</code>
+      </p>
+      <p>
+        <strong>Sandbox Environment:</strong> All transactions made using this
+        environment are counted as test transactions and have no effect on
+        accounting. URL starts with <code>https://sandbox.sslcommerz.com</code>
+      </p>
+      <img src="images/3_gateway_page.png" alt="Gateway Page Screenshot" />
+
+      <h3>OTP Page</h3>
+      <img src="images/4_otp_page.png" alt="OTP Screenshot" />
+
+      <h3>Successful transaction</h3>
+      <img
+        src="images/5_successfull_transaction.png"
+        alt="Successful Transaction Screenshot"
+      />
+
+      <h3>Payment History</h3>
+      <img
+        src="images/6_payment_history.png"
+        alt="Payment History Screenshot"
+      />
+
+      <h3>Payment Details</h3>
+      <img
+        src="images/7_payment_details.png"
+        alt="Payment Details Screenshot"
+      />
+
+      <p>
+        For more information please visit:
+        <a href="https://sslcommerz.com/payment-gateway/" target="_blank"
+          >https://sslcommerz.com/payment-gateway/</a
+        >
+      </p>
+      <p>
+        <a href="https://sslcommerz.com/privacy-policy-3/" target="_blank"
+          >Privacy Policy</a
+        >
+      </p>
+      <p>
+        <a href="https://sslcommerz.com/terms-and-conditions/" target="_blank"
+          >Terms and Conditions</a
+        >
+      </p>
+    </div>
+  </body>
+  <!-- Footer Section -->
+  <footer
+    style="
+      background-color: #003f6b;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      margin-top: 40px;
+    "
+  >
+    <div
+      style="
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      "
+    >
+      <!-- Logo -->
+      <div>
+        <a href="https://sslcommerz.com/">
+          <img
+            src="images/sslcommerz_logo.png"
+            alt="SSLCommerz"
+            style="max-width: 150px; max-height: 50px"
+          />
+        </a>
+      </div>
+      <div>
+        <p style="font-size: 0.9em; margin: 5px 0">
+          2024 SSLCOMMERZ Ltd. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+</html>
