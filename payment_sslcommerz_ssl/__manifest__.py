@@ -14,7 +14,7 @@
         'views/payment_sslcommerz_templates.xml',
         'views/payment_provider_views.xml',
 
-        'data/payment_methods_data.xml',
+        'data/payment_icon_data.xml',
         'data/payment_provider_data.xml',
     ],
 

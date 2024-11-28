@@ -7,13 +7,13 @@
         <field name="inherit_id" ref="payment.payment_provider_form" />
         <field name="arch" type="xml">
             <group name="provider_credentials" position="inside">
-                <group invisible="code != 'sslcommerz'">
+                <group attrs="{'invisible': [('code', '!=', 'sslcommerz')]}">
                     <field name="sslc_store_id"
                         string="SSLCommerz Store ID"
-                        required="code == 'sslcommerz' and state != 'disabled'" />
+                        attrs="{'required': [('code', '=', 'sslcommerz'), ('state', '!=', 'disabled')]}" />
                     <field name="sslc_store_pass"
                         string="SSLCommerz Store Password"
-                        required="code == 'sslcommerz' and state != 'disabled'"
+                        attrs="{'required': [('code', '=', 'sslcommerz'), ('state', '!=', 'disabled')]}"
                         password="True" />
                 </group>
             </group>

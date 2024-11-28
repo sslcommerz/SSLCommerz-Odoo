@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="payment_icon_sslcommerz" model="payment.icon">
+        <field name="name">SSLCommerz</field>
+        <field name="sequence">1000</field>
+        <field name="image" type="base64" file="payment_sslcommerz_ssl/static/description/icon.png" />
+    </record>
+
+</odoo>

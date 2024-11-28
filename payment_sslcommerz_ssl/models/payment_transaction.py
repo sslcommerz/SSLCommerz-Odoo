@@ -50,7 +50,6 @@ class PaymentTransaction(models.Model):
             'total_amount': self.amount,
             'currency': self.currency_id.name,
             'product_category': "E-commerce",
-            'product_name': self.payment_method_id.name,
             'cus_name': self.partner_id.name,
             'cus_email': self.partner_id.email,
             'cus_add1': self.partner_id.contact_address,
@@ -79,7 +78,7 @@ class PaymentTransaction(models.Model):
             total_amount=self.amount,
             currency=self.currency_id.name,
             product_category="E-commerce",
-            product_name=self.payment_method_id.name,
+            product_name='Odoo payment',
             num_of_item=1,
             shipping_method="NO"
         )

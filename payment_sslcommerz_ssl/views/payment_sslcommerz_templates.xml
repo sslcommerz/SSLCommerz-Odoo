@@ -21,7 +21,6 @@
             <input type="hidden" name="fail_url" t-att-value="fail_url" />
             <input type="hidden" name="cancel_url" t-att-value="cancel_url" />
             <input type="hidden" name="signature" t-att-value="signature" />
-            <button type="submit" class="btn btn-primary">Proceed to Payment</button>
         </form>
     </template>
 
