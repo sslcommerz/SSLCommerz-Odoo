@@ -12,7 +12,7 @@ on form submission provided by the `payment` module.
 
 ## Prerequisite
 
-- Odoo version 18
+- Odoo version 16.0 or higher (Tested on 16.0,17.0 & 18.0)
 - A <a href="https://developer.sslcommerz.com/registration/" target="_blank">Sandbox Account</a>  or <a href="https://join.sslcommerz.com/" target="_blank">Live Merchant Account</a>
 
 ## Installation instructions
