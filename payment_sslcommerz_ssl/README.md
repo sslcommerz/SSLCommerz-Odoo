@@ -1,4 +1,4 @@
-# Odoo module for SSLCOMMERZ
+# [Odoo module for SSLCOMMERZ](https://apps.odoo.com/apps/modules/18.0/payment_sslcommerz_ssl)
 
 ## Description
 
@@ -12,7 +12,7 @@ on form submission provided by the `payment` module.
 
 ## Prerequisite
 
-- Odoo 16 or higher
+- Odoo version 18.0(Tested on 18.0)
 - A <a href="https://developer.sslcommerz.com/registration/" target="_blank">Sandbox Account</a>  or <a href="https://join.sslcommerz.com/" target="_blank">Live Merchant Account</a>
 
 ## Installation instructions
@@ -27,7 +27,7 @@ Please Follow these steps for setting up SSLCommerz Payment module in Odoo.
 ----------
 ![](/payment_sslcommerz_ssl/static/description/images/module_sslcommerz.png)
 
-## Setup
+## Setup instructions
 
 Once you have installed the module please follow these steps for setting up SSLCommerz Payment Provider.
 - Go to your websites Configuration > Payment Providers & select SSLCommerz
