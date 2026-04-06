@@ -21,9 +21,8 @@ class SSLCommerzController(http.Controller):
         """ Handle successful payment notification. """
         _logger.info("SSLCommerz Success Data: %s", data)
         try:
-            tx = request.env["payment.transaction"].sudo(
-            )._get_tx_from_notification_data('sslcommerz', data)
-            tx._process_notification_data(data)
+            request.env["payment.transaction"].sudo()._process(
+                'sslcommerz', data)
 
             # Redirect to a generic payment status page
             return request.redirect("/payment/status")
@@ -40,8 +39,8 @@ class SSLCommerzController(http.Controller):
         """ Handle failed payment notification. """
         _logger.info("SSLCommerz Fail Data: %s", data)
         try:
-            tx = request.env["payment.transaction"].sudo(
-            )._get_tx_from_notification_data("sslcommerz", data)
+            tx = request.env["payment.transaction"].sudo()._search_by_reference(
+                "sslcommerz", data)
             tx._set_error("Payment failed on SSLCommerz.")
             # Redirect to failure page
             return request.redirect("/payment/status?status=failed")
@@ -54,8 +53,8 @@ class SSLCommerzController(http.Controller):
         """ Handle payment cancellation notification. """
         _logger.info("SSLCommerz Cancel Data: %s", data)
         try:
-            tx = request.env["payment.transaction"].sudo(
-            )._get_tx_from_notification_data("sslcommerz", data)
+            tx = request.env["payment.transaction"].sudo()._search_by_reference(
+                "sslcommerz", data)
             tx._set_canceled()
             # Redirect to cancellation page
             return request.redirect("/payment/status?status=cancelled")
@@ -88,8 +87,8 @@ class SSLCommerzController(http.Controller):
                 return "FAIL"
 
             # Process the transaction using IPN data
-            tx = request.env["payment.transaction"].sudo(
-            )._get_tx_from_notification_data("sslcommerz", data)
+            tx = request.env["payment.transaction"].sudo()._search_by_reference(
+                "sslcommerz", data)
             if not tx:
                 _logger.error("Transaction not found for IPN data: %s",
                               data.get("tran_id", "Unknown"))

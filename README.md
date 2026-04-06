@@ -1,4 +1,4 @@
-# [Odoo module for SSLCOMMERZ](https://apps.odoo.com/apps/modules/18.0/payment_sslcommerz_ssl)
+# [Odoo module for SSLCOMMERZ](https://apps.odoo.com/apps/modules/19.0/payment_sslcommerz_ssl)
 
 ## Description
 
@@ -12,7 +12,7 @@ on form submission provided by the `payment` module.
 
 ## Prerequisite
 
-- Odoo version 18.0(Tested on 18.0)
+- Odoo version 19.0(Tested on 19.0)
 - A <a href="https://developer.sslcommerz.com/registration/" target="_blank">Sandbox Account</a>  or <a href="https://join.sslcommerz.com/" target="_blank">Live Merchant Account</a>
 
 ## Installation instructions

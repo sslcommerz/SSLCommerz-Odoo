@@ -107,44 +107,47 @@ class PaymentTransaction(models.Model):
             raise ValidationError(
                 "Payment initialization failed: " + response.get("failedreason", "Unknown error"))
 
-    def _get_tx_from_notification_data(self, provider_code, notification_data):
-        """Find the transaction based on SSLCommerz data."""
-        tx = super()._get_tx_from_notification_data(provider_code, notification_data)
-        if provider_code != 'sslcommerz':
-            return tx
+    def _extract_amount_data(self, payment_data):
+        """Override of `payment` to extract amount data from SSLCommerz payment data."""
+        if self.provider_code != 'sslcommerz':
+            return super()._extract_amount_data(payment_data)
 
-        reference = notification_data.get("tran_id")
+        return {
+            'amount': float(payment_data.get('amount', 0)),
+            'currency_code': payment_data.get('currency', ''),
+        }
+
+    def _extract_reference(self, provider_code, payment_data):
+        """Override of `payment` to extract the transaction reference from SSLCommerz data."""
+        if provider_code != 'sslcommerz':
+            return super()._extract_reference(provider_code, payment_data)
+
+        reference = payment_data.get("tran_id")
         if not reference:
             raise ValidationError(
                 "Missing transaction reference in SSLCommerz response.")
+        return reference
 
-        # Search for the transaction by reference
-        tx = self.search([("reference", "=", reference),
-                         ("provider_code", "=", provider_code)])
-        if not tx:
-            raise ValidationError(
-                f"No transaction found matching reference {reference}.")
-        return tx
-
-    def _process_notification_data(self, notification_data):
-        super()._process_notification_data(notification_data)
+    def _apply_updates(self, payment_data):
+        """Override of `payment` to update the transaction based on SSLCommerz data."""
+        super()._apply_updates(payment_data)
         if self.provider_code != 'sslcommerz':
             return
 
         _logger.info(
-            f"Processing SSLCommerz notification data: {notification_data}")
+            f"Processing SSLCommerz notification data: {payment_data}")
 
         provider = self.provider_id
 
         # Update the provider reference.
-        self.provider_reference = notification_data.get('tran_id')
+        self.provider_reference = payment_data.get('tran_id')
 
         validation = Validation(
             sslc_is_sandbox=provider.state == 'test',
             sslc_store_id=provider.sslc_store_id,
             sslc_store_pass=provider.sslc_store_pass,
         )
-        result = validation.validate_transaction(notification_data["val_id"])
+        result = validation.validate_transaction(payment_data["val_id"])
 
         _logger.info(f"SSLCommerz Validation result: {result}")
 
