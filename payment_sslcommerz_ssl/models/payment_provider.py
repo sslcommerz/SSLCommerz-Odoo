@@ -17,7 +17,7 @@ class PaymentProvider(models.Model):
         string="SSLCommerz Store Password", required_if_provider='sslcommerz',)
 
     def _get_urls(self):
-        base_url = self.get_base_url()
+        base_url = self.get_base_url().rstrip('/')
         return {
             "success_url": f"{base_url}/payment/sslcommerz/success",
             "fail_url": f"{base_url}/payment/sslcommerz/fail",
