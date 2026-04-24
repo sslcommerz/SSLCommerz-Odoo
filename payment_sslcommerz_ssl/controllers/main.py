@@ -81,11 +81,6 @@ class SSLCommerzController(http.Controller):
                 sslc_store_pass=provider.sslc_store_pass,
             )
 
-            if not validation.validate_ipn_hash(data):
-                _logger.error("Invalid IPN hash received for transaction: %s", data.get(
-                    "tran_id", "Unknown"))
-                return "FAIL"
-
             # Process the transaction using IPN data
             tx = request.env["payment.transaction"].sudo()._search_by_reference(
                 "sslcommerz", data)

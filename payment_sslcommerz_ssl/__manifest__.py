@@ -20,5 +20,7 @@
 
     'post_init_hook': 'post_init_hook',
     'uninstall_hook': 'uninstall_hook',
+    'installable': True,
+    'application': True,
     'license': 'LGPL-3',
 }
